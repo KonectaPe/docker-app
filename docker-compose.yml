@@ -1,0 +1,14 @@
+version: '3'
+services:
+  v_0.2:
+    build: v_0.2
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: jdbc:mysql://b9a9tqbrmz1urp9bslkc-mysql.services.clever-cloud.com:3306/b9a9tqbrmz1urp9bslkc
+      DB_USER: ufh5y3cyqsckpgjt
+      DB_PASSWORD: NQ5fc5dMEDxPpeogJV7w
+      API_SECURITY_SECRET: 123456
+      CORS_ALLOWED_ORIGINS: http://localhost:4200
+    restart: always
