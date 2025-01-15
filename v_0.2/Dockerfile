@@ -17,7 +17,7 @@ FROM openjdk:17-jdk-slim
 VOLUME /tmp
 
 # Copiar el JAR desde la etapa de compilación
-COPY --from=build /app/target/v_0.2-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /target/v_0.2-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT [ "java" , "-jar" , "/app.jar" ]
 EXPOSE 8080
 #FROM ubuntu:latest AS build
